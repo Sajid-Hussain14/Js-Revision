@@ -100,8 +100,37 @@ const usrdata = [
 ]
 
 usrdata[1].email
-console.log(fbusr)
+// console.log(fbusr)
 
-console.log(Object.keys(fbusr)) //important get keys as arry
-console.log(Object.values(fbusr)) //important get values as arry
+// console.log(Object.keys(fbusr)) //important get keys as arry
+// console.log(Object.values(fbusr)) //important get values as arry
+/**************8DESTRUCTURING OF OBJECTS IN JS */
+const course = {
+    coursename : "JS",
+    PRICE : "1000",
+    CourseInstructor : "sajid"
+}
 
+//better way to print the details
+
+// const {CourseInstructor} = course  //and we can change the keynames as well here eg:
+const {CourseInstructor: instructor} = course
+
+console.log(instructor)
+
+//API RELATED THINGS
+// {
+//     "name":"sajid",
+//     "course" : "jss",
+//     "price": "400"
+
+// }
+
+[
+    {
+
+    },
+    {
+
+    }
+]
