@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM THREE</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    
+</body>
+<script>
+    const div1 = document.createElement('div');
+    console.log(div1);
+    div1.className = "Main DIV"
+    div1.id = Math.round(Math.random() * 10+ 1)
+    div1.setAttribute("title", "generated title")
+    div1.style.backgroundColor = "orange"
+    div1.style.padding = "15px"
+    // div1.innerText = "DOM DEMO"
+    const addtext = document.createTextNode("DOM DEMO 2")
+    div1.appendChild(addtext)
+    document.body.appendChild(div1)
+</script>
+</html>
