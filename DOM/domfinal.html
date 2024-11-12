@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM FINAL</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <ul class="language">
+        <li>JAVASCRIPT</li>
+    </ul>
+</body>
+<script>
+    function addlang(langName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    // addlang("Python")
+    // addlang("JAVA")
+    // addlang("RUBY")
+
+    function addoptilang (langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+
+    }
+    addoptilang("php")
+
+    //edit elements
+    const secondlang = document.querySelector("li:nth-child(1)")
+    const newli = document.createElement('li')
+    newli.textContent = "C"
+    secondlang.replaceWith(newli)
+
+    const thirdlang = document.querySelector("li:nth-child(2)")
+    const newli1 = document.createElement('li')
+    newli1.textContent = "C++"
+    thirdlang.replaceWith(newli1)
+
+    const fourlang = document.querySelector("li:nth-child(2)")
+    fourlang.outerHTML = "<li>PYTHON</li>"
+
+    //remove
+
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove()
+</script>
+</html>
