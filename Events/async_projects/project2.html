@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASYNC PROJETCTS</title>
+</head>
+<body>
+    <h1>Code by Sajid</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+    const tempDate = function(str){
+    console.log(str, Date.now());
+   }
+   const intervalID = setInterval(tempDate, 1000, "calling")
+   clearInterval(intervalID)
+   //NOW we want to start and stop the interval using buttons above;
+   const starting = document.querySelector('#start').addEventListener('click', function(){
+    console.log("Started");
+   }) 
+   const stopped = document.querySelector('#stop').addEventListener('click', function(){
+    console.log("Stopped");
+  
+   }) 
+
+</script>
+</html>
