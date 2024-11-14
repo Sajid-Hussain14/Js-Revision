@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASYNC PROJETCTS</title>
+</head>
+<body>
+    <h1>Code by Sajid</h1>
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+    const sajid =  function(){  //WORKS ONCE AFTER A GIVEN AMOUNT OF TIME
+        console.log("SAJID");
+    }
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "Updated by sajid"
+    }
+    
+    // setTimeout(sajid, 2000)
+    const refforclearTimeout = setTimeout(changeText, 2000)
+//since there is a timeout so there should be an option to stop that event if that has not been executed yet for that follow:
+    //  clearTimeout(refforclearTimeout) // it will stop callbacks in the queue so we need to add it on any event to serve our goal
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(refforclearTimeout)
+        console.log("STOPPED");
+        
+    })
+
+
+</script>
+</html>
