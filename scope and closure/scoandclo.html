@@ -1,0 +1,33 @@
+<!-- //closure--gives access to outer function from an inner function
+//lexical sxoping -- scope within functions  ------ 
+Lexical scope refers to how variable scope is determined in JavaScript. Specifically, it defines the region of a program in which a variable is accessible based on where it is physically declared (in the source code). Lexical scope is determined at the time the code is written, not at runtime.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lexical scope and Closure</title>
+</head>
+<body style="background-color: blanchedalmond;">
+    <script>
+        function outer(){
+            let username = "sajid"
+            function inner(){
+                console.log("INNER FUNCTION",username);
+
+            }
+            inner()
+            function inner2(){
+                console.log("INNER22222222 FUNCTION",username);
+            }
+            inner()
+            inner2()
+        }
+        console.log("OUTER FUNCTION",username);
+        outer()
+    </script>
+</body>
+</html>
+
