@@ -17,7 +17,7 @@ user.welcome()
 // console.log(this)
 //ARROW FUNCTION SIMPLE DEMO
 const hello = () => {
-    let usname = "hitesh"
+    let usname = "sajid"
     console.log(this)
     
 }
